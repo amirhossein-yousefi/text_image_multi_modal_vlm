@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text-image-multi-modal-vlm"
+version = "0.1.0"
+description = "Multi-modal vision-language hateful content classification with LoRA/QLoRA."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "Project Contributors" }]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "transformers>=4.36.0",
+    "huggingface_hub>=0.34.0,<1.0",
+    "peft>=0.7.0",
+    "accelerate>=0.25.0",
+    "bitsandbytes>=0.41.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "pillow>=10.0.0",
+    "scikit-learn>=1.3.0",
+    "tensorboard>=2.14.0",
+    "tqdm>=4.66.0"
+]
+
+[project.optional-dependencies]
+aws = [
+    "boto3>=1.28.0",
+    "sagemaker>=2.200.0"
+]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.1.8",
+    "black>=23.11.0",
+    "mypy>=1.7.0",
+    "pre-commit>=3.5.0"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
+testpaths = ["tests"]
+norecursedirs = [".git", ".venv", "data", "runs", "assets", "reports", "docs", "models", "notebooks"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+select = ["E", "F", "B", "I"]
+
+[tool.mypy]
+python_version = "3.8"
+ignore_missing_imports = true
+warn_unused_configs = true

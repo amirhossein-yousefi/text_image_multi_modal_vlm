@@ -258,6 +258,12 @@ Sources:
 - Qwen validation runtime: `runs/qwen2vl_lora/val_metrics.json`
 - PaliGemma validation runtime: `runs/paligemma_lora/val_metrics.json`
 
+### Training loss curves
+
+| Qwen2-VL + LoRA | PaliGemma 2 + LoRA |
+|---|---|
+| ![Qwen2-VL training loss curve](assets/qwen/train_loss.svg) | ![PaliGemma 2 training loss curve](assets/paligemma/train_loss.svg) |
+
 ---
 
 ## Inference

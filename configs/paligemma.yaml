@@ -1,0 +1,16 @@
+# Example configuration for PaliGemma 2 training on MMHS150K
+
+train_csv: data/mmhs150k/train.csv
+val_csv: data/mmhs150k/val.csv
+test_csv: data/mmhs150k/test.csv
+image_root: data/mmhs150k/images
+class_names: data/mmhs150k/class_names.txt
+
+out_dir: runs/paligemma_lora
+model_id: google/paligemma2-3b-pt-224
+use_lora: true
+bf16: true
+num_train_epochs: 1
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 4
+learning_rate: 2e-4
