@@ -1,5 +1,7 @@
 # Multi-Modal Vision-Language Models for Hateful Content Classification
 
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model-yellow?logo=huggingface&logoColor=white)](https://huggingface.co/Amirhossein75/qwen2-vl-2b-mmhs150k-lora) [Amirhossein75/qwen2-vl-2b-mmhs150k-lora](https://huggingface.co/Amirhossein75/qwen2-vl-2b-mmhs150k-lora)
+
 Fine-tuning Vision–Language Models (VLMs) with LoRA/QLoRA for **multi-label hateful content detection** on paired **text + image** data.
 
 This project uses **generative classification**: instead of training a dedicated classification head, the model generates a strict JSON array of labels (e.g., `["racist", "sexist"]`).
