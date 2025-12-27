@@ -1,8 +1,9 @@
 # Multi-Modal Vision-Language Models for Hateful Content Classification
 
-## 🚀 Model on Hugging Face
+## 🚀 Models on Hugging Face
 
-[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Vision--Language--Model-yellow.svg)](https://huggingface.co/Amirhossein75/qwen2-vl-2b-mmhs150k-lora)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Qwen2--VL--2B-yellow.svg)](https://huggingface.co/Amirhossein75/qwen2-vl-2b-mmhs150k-lora)
+[![Hugging Face](https://img.shields.io/badge/🤗%20PaliGemma2--3B-yellow.svg)](https://huggingface.co/Amirhossein75/paligemma2-3b-mmhs150k-lora)
 
 Fine-tuning Vision–Language Models (VLMs) with LoRA/QLoRA for **multi-label hateful content detection** on paired **text + image** data.
 
